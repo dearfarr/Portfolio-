@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fariza Karimova — Frontend Developer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    /* === GLOBAL === */
+    body{
+      margin: 0;
+      font-family: "Inter", Arial;
+      background: radial-gradient(circle at 20% 30%, #6a00ff, #000);
+      color: white;
+    }
+    /* === NAV === */
+    .nav{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+    }
+    .nav-logo{
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .nav a{
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #e8ceff;
+      transition: 0.3s;
+    }
+    .nav a:hover{
+      color: #fff;
+    }
+    /* === HERO === */
+    .hero{
+      padding: 150px 10% 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-text h1{
+      font-size: 60px;
+      font-weight: 800;
+    }
+    .hero-text p{
+      margin: 20px 0;
+      font-size: 20px;
+      opacity: 0.85;
+    }
+    .btn{
+      display: inline-block;
+      background: #a45bff;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+    .btn:hover{
+      background: #c87aff;
+      transform: translateY(-3px);
+    }
+    /* ABSTRACT SPHERE */
+    .sphere {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.2);
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      animation: float 5s ease-in-out infinite;
+    }
+    .sphere img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @keyframes float{
+      0%{transform: translateY(0);}
+      50%{transform: translateY(-25px);}
+      100%{transform: translateY(0);}
+    }
+    /* === SERVICES === */
+    .services{
+      padding: 100px 10%;
+    }
+    .services h2{
+      text-align: center;
+      font-size: 42px;
+    }
+    .service-grid{
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .card{
+      padding: 30px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+    .card:hover{
+      transform: translateY(-8px);
+      border-color: #b57bff;
+    }
+    /* === TECHNOLOGIES === */
+    .technologies{
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .tech-list{
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .tech-list span{
+      background: rgba(255,255,255,0.08);
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    /* === PORTFOLIO === */
+    .portfolio{
+      padding: 100px 10%;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(255,127,255,0.5);
+    }
+    /* === CONTACT === */
+    .contact{
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .contact-box p{
+      margin: 10px 0;
+    }
+    .contact a{
+      color: #c78cff;
+      text-decoration: none;
+    }
+    /* === FOOTER === */
+    .footer{
+      text-align: center;
+      padding: 30px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-logo">FARIZA</div>
+    <nav>
+      <a href="#hero">Главная</a>
+      <a href="#services">Услуги</a>
+      <a href="#portfolio">Проекты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>Frontend Developer</h1>
+      <p>
+        Я создаю веб-интерфейсы, которые выглядят современно, работают быстро и чувствуют себя приятно.
+        Фокус — дизайн, анимации, адаптив и аккуратность в каждой детали.
+      </p>
+      <a href="#portfolio" class="btn">Мои проекты</a>
+    </div>
+    <div class="hero-art">
+      <div class="sphere">
+        <img src="https://uploads.onecompiler.io/446z36p3w/446z35sbq/5292062246492114315%20(1).jpg" alt="Fariza" />
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Что я делаю</h2>
+    <div class="service-grid">
+      <div class="card">
+        <h3>Frontend Development</h3>
+        <p>Верстаю адаптивные, аккуратные и быстрые сайты. Работаю с современными компонентами и анимациями.</p>
+      </div>
+      <div class="card">
+        <h3>UI Implementation</h3>
+        <p>Переношу макеты в идеальный пиксель-перфект. Анимации, плавность, визуальная эстетика.</p>
+      </div>
+      <div class="card">
+        <h3>Web Design (basic)</h3>
+        <p>Создаю простые, но стильные интерфейсы и структуры страниц, если макета нет.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="technologies" class="technologies">
+    <h2>Стек</h2>
+    <div class="tech-list">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>GSAP</span>
+      <span>Figma</span>
+      <span>React (в процессе изучения)</span>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Проекты</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide project-slide">
+          <div class="project-card">
+            <img src="https://uploads.onecompiler.io/446z36p3w/446z35sbq/5311999909881910125.jpg" alt="Проект 1" />
+            <h3>Портфолио веб-разработчика</h3>
+            <p>На портфолио представлены основные разделы, использовались HTML, CSS и Bootstrap.</p>
+          </div>
+        </div>
+        <div class="swiper-slide project-slide">
+          <div class="project-card">
+            <img src="https://uploads.onecompiler.io/446z36p3w/446z35sbq/5311999909881910123.jpg" alt="Проект 2" />
+            <h3>Информационный сайт</h3>
+            <p>Сайт, предоставляющий услуги. Технологии: HTML и CSS</p>
+          </div>
+        </div>
+        <div class="swiper-slide project-slide">
+          <div class="project-card">
+            <img src="https://uploads.onecompiler.io/446z36p3w/446z35sbq/5311999909881910124.jpg" alt="Проект 3" />
+            <h3>Калькулятор</h3>
+            <p>Стильный простой калькулятор, используемые технологии: HTML, CSS и JS.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Связаться</h2>
+    <div class="contact-box">
+      <p>Email: <a href="mailto:karimovaf528@gmail.com">karimovaf528@gmail.com</a></p>
+      <p>Telegram: <a href="https://t.me/hassliebe_02">@hassliebe_02</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Fariza Karimova. Все права защищены (нет)</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+  </script>
+</body>
+</html>
